@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Shopping Cart</title>
+</head>
+
+<body>
+  <h1>Shopping Cart</h1>
+  <div id="app" class="content">
+    <section class="image-gallery" load="getItems()">
+      <div class="image" v-for="item in items" v-if="item.selected === true">
+          <div v-html="ordered(item)">
+        <h2>{{item.title}}- price {{item.price}}</h2>
+        <img :src="item.path" /><br>
+  </div>
+  </div>
+  </div>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+  <script src="/cart.js"></script>
+</body>
+
+</html>

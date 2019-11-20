@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Administator URL</title>
+</head>
+
+<body>
+  <div id="admin" class="content">
+      <h1>Store Management Interface</h1>
+    <div class="add">
+      <div class="form">
+        Product Name <input v-model="title"><br>
+        Price <input v-model="price"><br>
+        Picture URL <input v-model="path">
+        <p></p>
+        <button @click="upload">Add Product</button>
+      <br>
+      
+      <h1>Current Products</h1>
+      <br>
+      <div id="admin" load="getItems()">
+    <section class="image-gallery">
+      <div class="image" v-for="item in items" load="selectItem()">
+        <h1><button @click="deleteItem(item)">X</button>
+        {{item.title}}- price {{item.price}}- ordered {{item.ordered}}</h1>
+        <img :src="item.path" height="400" width = "400"><br>
+        
+  </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  
+  
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+  <script src="/admin.js"></script>
+</body>
+
+</html>

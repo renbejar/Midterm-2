@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Customer URL</title>
+</head>
+
+<body>
+  <h1>Shopping Interface</h1>
+  <br>
+  <h1>Current Products</h1>
+  <div id="app" class="content">
+    <section class="image-gallery" load="getItems()">
+      <div class="image" v-for="item in items">
+        <h2><input type="checkbox" @click="selectItem(item)">{{item.title}}- price {{item.price}}</h2>
+        <img :src="item.path" /><br>
+  </div>
+  </div>
+  <div class="footer">
+    <a href="/cart.html"><button>Submit Purchase</button></a><br>
+    <a href="/admin.html">Admin</a>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
